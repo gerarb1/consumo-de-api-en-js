@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FakeStore API - Ejemplo CRUD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>FakeStore API - Ejemplo CRUD</h1>
+
+    <!-- Botones y formularios -->
+    <button onclick="getAllProducts()">Obtener todos los productos</button>
+    <button onclick="getProductById()">Obtener producto por ID</button>
+    <input type="number" id="productId" placeholder="ID del producto">
+    <button onclick="getProductsByCategory()">Productos por Categoría</button>
+    <select id="categorySelect"></select>
+
+    <h2>Crear nuevo producto</h2>
+    <form id="createProductForm">
+        <input type="text" id="newProductTitle" placeholder="Título" required>
+        <input type="number" id="newProductPrice" placeholder="Precio" required>
+        <input type="text" id="newProductDescription" placeholder="Descripción" required>
+        <input type="text" id="newProductCategory" placeholder="Categoría" required>
+        <input type="text" id="newProductImage" placeholder="URL de imagen" required>
+        <button type="submit">Crear producto</button>
+    </form>
+
+    <!-- Contenedores dinámicos -->
+    <div id="stats"></div>
+    <div id="results"></div>
+
+    <!-- Scripts externos -->
+    <script src="api.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
